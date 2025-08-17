@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<!-- saved from url=(0053)https://therohitshelar97.github.io/CurrencyConverter/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>API Normal</title>
+    <link href="bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style>
+    /* Google Fonts import for heading */
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+        .h1{
+            background-color: rgba(245, 215, 176, 0.7);
+            height: 200px;
+            border-radius: 20px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+        }
+        .h11{
+            padding-top: 70px;
+            padding-left: 0;
+            text-align: center;
+        }
+        .h2{
+            background-color: rgba(12, 240, 164, 0.3);
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+        }
+        .currency-heading {
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(90deg, #232526 0%, #414345 50%, #000000 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+            margin-bottom: 0.5em;
+        }
+        span{
+            color: #dc3545;
+        }
+
+        body{
+            background-image: url('https://img.freepik.com/free-vector/indian-rupee-coins-falling-background_23-2148005172.jpg?w=740&t=st=1691232258~exp=1691232858~hmac=31d40182f2bb3662bffdbbaf15fcdfc53dde23752b968f82ea52e45faf22cc25');
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 100vh;
+        }
+        form {
+            background: rgba(255,255,255,0.85);
+            padding: 32px 24px 24px 24px;
+            border-radius: 18px;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+            margin-top: 32px;
+            margin-bottom: 24px;
+        }
+        label, select, input[type="number"] {
+            display: block;
+            width: 100%;
+            margin-bottom: 18px;
+        }
+        select.form-select, input.form-control {
+            border-radius: 8px;
+            border: 1px solid #ced4da;
+            box-shadow: none;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            font-size: 1.1rem;
+            padding: 10px 14px;
+            background: #f8f9fa;
+        }
+        select.form-select:focus, input.form-control:focus {
+            border-color: #0d6efd;
+            box-shadow: 0 0 0 2px rgba(13,110,253,0.15);
+            outline: none;
+        }
+        input[type="number"] {
+            color: #0d6efd;
+        }
+        option {
+            color: #212529;
+        }
+        .btn-danger {
+            border-radius: 8px;
+            font-size: 1.1rem;
+            padding: 10px 32px;
+            font-weight: 500;
+            box-shadow: 0 2px 8px rgba(220,53,69,0.08);
+            transition: background 0.2s, box-shadow 0.2s;
+        }
+        .btn-danger:hover, .btn-danger:focus {
+            background: #bb2d3b;
+            box-shadow: 0 4px 16px rgba(220,53,69,0.15);
+        }
+        @media (max-width: 768px) {
+            .h1 {
+                height: 140px;
+            }
+            form {
+                padding: 18px 8px 16px 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+     <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-sm-12 offset-lg-4 h2 mt-3">
+                  <h2 class="currency-heading">Currency Converter</h2>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col-12">
+                <form name="myform">
+                    <label for="from-currency"><strong>From:</strong></label>
+                    <select id="from-currency" name="drop" class="form-select">
+                        <option>Select Below Currency</option>
+                        <option value="USD">USD</option>
+                        <option value="INR">INR</option>
+                        <option value="AFN">Afghanistan</option>
+                        <option value="AUD">Australian Dollar</option>
+                        <option value="EUR">Euro</option>
+                        <option value="BHD">Baharain</option>
+                        <option value="BDT">Bangladesh</option>
+                        <option value="BYN">Belarus</option>
+                        <option value="BTN">Bhutan</option>
+                        <option value="BRL">Brazil</option>
+                        <option value="BIF">Burundi</option>
+                        <option value="KHR">Cambodia</option>
+                        <option value="CAD">Canada</option>
+                        <option value="CNY">China</option>
+                        <option value="COP">Colombia</option>
+                        <option value="IDR">Indonesia</option>
+                    </select>
+                    <label for="to-currency"><strong>To:</strong></label>
+                    <select id="to-currency" name="down" class="form-select">
+                        <option>Select Below Currency</option>
+                        <option value="USD">USD</option>
+                        <option value="INR">INR</option>
+                        <option value="AFN">Afghanistan</option>
+                        <option value="AUD">Australian Dollar</option>
+                        <option value="EUR">Euro</option>
+                        <option value="BHD">Baharain</option>
+                        <option value="BDT">Bangladesh</option>
+                        <option value="BYN">Belarus</option>
+                        <option value="BTN">Bhutan</option>
+                        <option value="BRL">Brazil</option>
+                        <option value="BIF">Burundi</option>
+                        <option value="KHR">Cambodia</option>
+                        <option value="CAD">Canada</option>
+                        <option value="CNY">China</option>
+                        <option value="COP">Colombia</option>
+                        <option value="IDR">Indonesia</option>
+                    </select>
+                    <label for="amount"><strong>Enter Amount:</strong></label>
+                    <input id="amount" type="number" name="amount" class="form-control" placeholder="Enter amount...">
+                </form>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="h1">
+                            <h1 class="mt-5 h11">Currency : <span id="id"></span></h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+
+    
+   
+    <br><br>
+    <script>
+
+        function DataFetching(){
+            data1 = document.myform.drop.value;
+            amount = parseFloat(document.myform.amount.value);
+            
+            fetch(`https://api.exchangerate-api.com/v4/latest/${data1}`)
+            .then(response=>response.json())
+            .then(data=>{
+                console.log(data);
+                drop1 = document.myform.down.value;
+                rate = data.rates[drop1];
+
+                new_amount = amount*rate;
+                
+                document.getElementById("id").innerHTML = new_amount;
+                
+            })
+
+        }
+    </script>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center">
+                <input type="submit" onclick="DataFetching()" value="Convert" class="btn btn-danger" style="min-width: 160px;" fdprocessedid="rhz5qg">
+            </div>
+        </div>
+    </div>
+    
+
+</body></html>
